@@ -118,4 +118,18 @@ public class ApiTests {
                         extract().response();
         Assert.assertEquals(response.jsonPath().getList(""), Collections.EMPTY_LIST);
     }
+
+
+    @Test
+    public void getFibonacciNumberAtGivenIndexOutofIndexRange() {
+
+       // Integer index out of range
+        given().when()
+                .pathParam("index", "2147483648")
+                .get(FIB_ATINDEX)
+                .then()
+                .statusCode(404) ;
+    }
+
+
 }
