@@ -12,3 +12,10 @@ There are no automated checks for this application.  Treating the application as
 
 # To submit your test
 Either fork this repo and share the link, or submit commits to a branch.
+
+
+1. Start the application/service
+      mvn exec:java
+      
+2. Run your tests
+    mvn test
