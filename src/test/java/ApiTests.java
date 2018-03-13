@@ -142,7 +142,7 @@ public class ApiTests {
                 .then()
                 .statusCode(200).contentType(ContentType.JSON).
                         extract().response();
-        int numberAt29Index= Integer.valueOf(response.asString());
+        int numberAt27Index= Integer.valueOf(response.asString());
 
         index=28;
         Response response1 = given().when()
@@ -152,7 +152,7 @@ public class ApiTests {
                 .statusCode(200).contentType(ContentType.JSON).
                         extract().response();
 
-        int numberAt30Index=Integer.valueOf(response1.asString());
+        int numberAt28Index=Integer.valueOf(response1.asString());
 
         index=29;
         Response response2 = given().when()
@@ -163,8 +163,8 @@ public class ApiTests {
                         extract().response();
 
 
-        int numberAt31Index=Integer.valueOf(response2.asString());
-        Assert.assertEquals(numberAt29Index+numberAt30Index,numberAt31Index );
+        int numberAt29Index=Integer.valueOf(response2.asString());
+        Assert.assertEquals(numberAt27Index+numberAt28Index,numberAt29Index );
 
 
     }
